@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.moon {
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.moon:after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(#111425, #3751e0);
+  background-attachment: fixed;
+}
+
+.forest {
+  position: absolute;
+  bottom: -1px;
+  left: -45px;
+  width: 105vw;
+}
+
+.scene i {
+  position: absolute;
+  background: #fff;
+  border: 50%;
+  animation: animate linear infinite;
+  z-index: -1;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  background: linear-gradient(#111425, #3751e0);
+}
+
+.calci {
+  width: 500px;
+  padding-top: 100px;
+  padding-bottom: 300px;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  transition: 0.25px;
+  text-align: center;
+}
+
+#display {
+  border: none;
+  background: white;
+  border-radius: 30px;
+  width: 300px;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: 300px;
+  height: 60px;
+  margin: 10px;
+  border: 2px solid white;
+  color: black;
+}
+
+.btnDesign {
+  width: 55px;
+  height: 55px;
+  padding-top: -1;
+  border: none;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  border-radius: 30px;
+  margin: 5px;
+}
+.OperatorDesign {
+  width: 55px;
+  height: 55px;
+  padding-top: -1;
+  border: none;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  border-radius: 30px;
+  margin: 5px;
+  transition: 0.25px;
+  cursor: pointer;
+}
+
+.OperatorDesign:hover {
+  background: #00d9ff;
+}
+.btnDesign:hover {
+  background: #00d9ff;
+}
+
+#zero {
+  width: 125px;
+  height: 55px;
+  padding-top: -1;
+  border: none;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  border-radius: 30px;
+  margin: 5px;
+  transition: 0.25px;
+  cursor: pointer;
+}
+
+#zero:hover {
+  background: #00d9ff;
+}
+.heading {
+  color: white;
+  margin-top: 300px;
+  margin-left: 100px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: 700px;
+  text-decoration: underline;
+}
+
+.love {
+  margin-left: 155px;
+  color: #ffffffca;
+  margin-top: 10px;
+}
+
+input[type="button"] {
+  z-index: 20;
+}
